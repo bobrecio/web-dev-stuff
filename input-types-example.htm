@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>HTML5: Input Element</h1>
+    <hr>
+    <form>
+        Placeholder: <input type="text" placeholder="placeholder" />
+        <hr>
+        Autofocus: <input type="text" placeholder="autofocus" autofocus />
+        <hr>
+        Required: <input type="text" placeholder="required" required />
+        <hr>
+        Datalist: <input type="text" placeholder="datalist" list="pets" />
+        <hr>
+        <datalist id="pets">
+            <option value="Koda">
+            <option value="Kenai">
+            <option value="Clyde">
+            <option value="Cosmo">
+            <option value="Smokey">
+        </datalist>
+        Search: <input type="search" placeholder="search" />
+        <hr>
+        Email: <input type="email" placeholder="email" />
+        <hr>
+        URL: <input type="url" placeholder="url" />
+        <hr>
+        Telephone:
+        <input type="tel" placeholder="tel" />
+        <hr>
+        Slider (with Number):
+        <input id="slider1" type="range" min="0" max="20" step="1" onchange="setTextValue('slider1','rangeValue1')" />
+        <input id="rangeValue1" type="number" min="0" max="20" step="1" size="2"
+            onchange="setElementValue('slider1','rangeValue1')" />
+        <hr>
+        Number: <input type="number" placeholder="number" />
+        <hr>
+        Date: <input type="date" placeholder="date" />
+        <hr>
+        Color: 
+        <input id='color1' type="color" value="#000000"
+            onchange="setTextValue('color1','colorText1')"/>
+        <input id='colorText1' type="text" 
+            onchange="setElementValue('color1','colorText1')"/>
+        <hr>
+        <input type="submit" />
+    </form>
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+    <script>
+        function setTextValue(elId, elVal) {
+            var x = document.getElementById(elVal);
+            var y = document.getElementById(elId);
+            x.value = y.value;
+        }
+        function setElementValue(elId, elVal) {
+            var x = document.getElementById(elVal);
+            var y = document.getElementById(elId);
+            y.value = x.value;
+        }
+        window.onload = function () {
+            setTextValue('slider1', 'rangeValue1'),
+            setTextValue('color1','colorText1');
+        }
+    </script>
+
+</body>
+
+</html>
