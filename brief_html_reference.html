@@ -1,0 +1,300 @@
+<head>
+  <!-- Following link pulls font from google fonts library. Use given instruction and add it to elements. We have added the font to the whole body element.-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  <style>
+    /*styles for different elments are included in the style block in the head section of the document. By utilizing different selectors one can style multiple elements together.*/
+
+    /*Following CSS selector colours green all h2 text element in the document*/
+    h2 {
+      color: green;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+
+    /*Following CSS selector sets the styles of all the body elements to 16 pixels and font family to sans-serif*/
+    body {
+      font-size: 16px;
+      font-family: 'Noto Sans', sans-serif;
+      /* family_name, generic name*/
+      line-height: 30px;
+    }
+
+    /* Following CSS class creates image of fixed size. width property can be used other places where we need to fix size*/
+    .small-image {
+      width: 300px;
+    }
+
+    .thin-red-border {
+      border-color: red;
+      /* border line color*/
+      border-width: 5px;
+      /* thickness of border*/
+      border-style: solid;
+      border-radius: 10px;
+    }
+
+    .thin-green-border {
+      border-color: green;
+      /* border line color*/
+      border-width: 5px;
+      /* thickness of border*/
+      border-style: solid;
+      border-radius: 10px;
+    }
+
+    .silver-background {
+      background-color: silver;
+    }
+
+    /*Following CSS code colours text blue using id attribute*/
+    #list-element {
+      position:relative;
+      width:60%;
+      color: blue;
+    }
+
+    /* This is an attribute selector*/
+    [type='checkbox'] {
+      margin: 30px 5px 30px 15px
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Below is a h1 element which is used for the page title. text colour is given by style='color:blue' statement. This type of style is kinown as inline style.   -->
+  <h1 style='color:blue'>A brief html reference!</h1>
+
+  <p>This tutorial came out as a byproduct when I was revisiting the FCC basic html tutorial section. I was learning and taking notes in CodePen. In the following sections I have managed to include the whole FCC html tutorial in a single write-up. By going through the document and its source one can have some understanding of how some of the basic html tags work. So best of luck in your journey. Following is the list of contents for the tutorial. Click on them to jump on specific section.</p>
+  <ul>
+    <li> <a href='#section1'>Header and paragrapgh tags</a> </li>
+    <li> <a href='#section2'>Links and images</a> </li>
+    <li> <a href='#lists'>List of items</a> </li>
+    <li> <a href='#section3'>Web Form</a> </li>
+    <li> <a href='#section4'>Div, head and body</a> </li>
+    <li> <a href='#css'>CSS basics</a> </li>
+    <li> <a href='#visual-design'>CSS visual design</a></li>
+    <li> <a href='#flexbox'> CSS flexbox</a> </li>
+    <li> <a href='#CSS-grid'>CSS grid </a>  </li>
+    <li> <a href='#applied-access'>Applied accessibility </a>  </li>
+    
+  </ul>
+  <h2 id='section1'>Header and paragrapgh tags</h2>
+  <p> This sentence is written inside a pragraph tag. Check the source code to learn about the same. All the header tags and paragrah tags start in a new line (as per my understanding!). There are different types of header tags, starting from h1 to h6. All section titles is written in h1 tag. Following are examples of different header tags.
+  <h4>This is an h4 tag. </h4>
+  <h5>This is an h5 tag. </h5>
+  <h6>This is an h6 tag. </h6>
+
+  <!--Below are different html tags-->
+  <main>
+    <!--Child element-->
+    <h3>We are inside a main tag!</h3>
+    <p> <i>"Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff."</i></p>
+    <p>Previous text is called an placeholder text. people use it whenever they need to place something as a placeholder.</p>
+    <p>Another paragraph ended abruptly! This shows that paragrapgh and header tags start in new line. Main tag ends after this paragraph. There are other elemental tags e.g. footer, nav, video, article, section etc.</p>
+  </main>
+  <!-- Other tags include. Empty tags also takes some space in the flow. Check by uncommenting below codes -->
+  <!-- <header></header>
+  <footer></footer>
+  <nav></nav>
+  <video></video>
+  <article></article>
+  <section></section>  -->
+  <!--End of different tags-->
+  <h2 id='section2'> Links and images</h2>
+  <p> inks can be internal or external. Links are inserted using the anchor element or a element. 'a' elmenet has different attributes such as href and target. href equals the destination link and target makes it open in the same window or in a new tab. Following are two links, one internal and another external.</p>
+  <a href='https://www.w3schools.com/' target='_blank'> Learn more about html and CSS </a>
+  <br>
+  <!--Puts line break-->
+  <a href='#css'>Link to CSS section</a>
+  <p> We can also put link inside a paragrph, such as <a href='https://www.codecademy.com/' target='_blank'>this link here</a>. You can follow the link to learn more about coding. We can also create dead links using a nice trick. <a href='#'>This link</a> is a dead link. Elements can also be made into links by nesting them inside an achor text. Following image is also a dead link.</p>
+  <a href='#'>
+    <img class='small-image thin-green-border' src='https://i.pinimg.com/originals/4c/0e/fd/4c0efdd7be898125de1a6bf83f041f67.png' alt='A bunch of roses' width='300' height='400'>
+  </a>
+  <h2 id='lists'>List of items</h2>
+  <p> We want to create list of items. A list can ordered i.e. numbered or unordered or bulleted. The way we create is as below.</p>
+
+  <p>Followings are two examples of ordered and unordered list</p>
+
+  <div class='thin-red-border silver-background' id='list-element'>
+    <ol id='ol1'>
+      <li>List item A</li>
+      <li>List item B</li>
+      <li>List item C</li>
+    </ol>
+
+    <ul>
+      <li>List item 1</li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+    </ul>
+  </div>
+
+  <h2 id='section3'> Web form</h2>
+  <p>input elements get input from user. They are of different types and self closing. Below is shown a few of them. </p>
+
+  <p>Below is a 'text' type input elment with a placeholder text</p>
+  <input type='text' placeholder='I am a text'>
+  <p> we can build forms by using form elements. The input element is placed inside form element to get user inputs. Buttons are of different types. 'required' option makes the field mandatory otherwise the form won't be submitted. A submit button is used to submit form data.</p>
+
+  <form action='/url where data to be submitted'>
+    <input type='text' placeholder='Mandatory form option' required>
+    <button type='submit'>submit</button>
+  </form>
+  <h3>Radio buttons and check-boxes</h3>
+  <p> Radio buttons are used when we need only one answer from multiple options. radio buttons are a type of input element. Associated label element makes the radio buttons attached to the label. All the related radio buttons should be in a group and have a name attribute for the group. This will unselect other options when one is selected. Add 'for' attribute in the label element which links it to the radio buttons with the same 'id' attribute of the input element.</p>
+  <p>Below is a form with radio buttons and option 3 already checked.</p>
+  <form action='/url to submit data'>
+    <label for='option1'>
+      <input id='option1' name='options' type='radio'>Option 1
+    </label>
+    <label for='option2'>
+      <input id='option2' name='options' type='radio'>Option 2
+    </label>
+    <label for='option3'>
+      <input id='option3' name='options' type='radio' checked>Option 3
+    </label>
+  </form>
+  <p> Forms use checkboxes when we have more than one answer to choose from multiple options. Checkboxes are also a type of input. All the above said about label, name and for attribute in case of radio buttons are also valid for checkboxes.</p>
+
+  <p>Below is a form with checkboxes. Option A and C are already checked.</p>
+  <form action='/url to submit data'>
+    <label for='optionA'>
+      <input id='optionA' name='checkbox-options' type='checkbox' value='op-A' checked>Option A
+    </label>
+    <label for='optionB'>
+      <input id='optionB' name='checkbox-options' type='checkbox' value='op-B'>Option B
+    </label>
+    <label for='optionC'>
+      <input id='optionC' name='checkbox-options' type='checkbox' value='op-C' checked>Option C
+    </label>
+  </form>
+  <p>Both radio and checkbox attribute report their selected values via value attribute when the form is submitted. name=value is the reponse when such form is submitted. when value attribute is missing a default value of 'on' is submitted. In order to identify option one must have some value set to the 'value' attribute.</p>
+  <h2 id='section4'> The div element, head and body tag</h2>
+  <p> This is a general purpose container for all other elements. Items such as lists can be put inside a div element. check the <a href='#lists'>list section</a> source code for the use of div element.</p>
+  <p> There are head and body tags to organize the html document. Metadata element like link, meta, title, style etc goes inside head tag. body tag contains page contents.
+  <p></p>
+
+  <h2 id='css'>Basic CSS</h2>
+
+  <h3> ways of styling elements</h3>
+  <ol>
+    <li> Inline style using style statement </li>
+    <li> Decorate multiple elements using html tags</li>
+    <li> Creating particular class of decoration using CSS class</li>
+    <li> Decorate particular id </li>
+    <li> Through attribute selection </li>
+  </ol>
+  <p> CSS treats each HTML element as its own box which is reffered to as the CSS Box Model. Block level items such as headings, paragraphs, divs etc start on a new line. Inline elements such as images and spans etc sit around other elements. Order of class declarations in the style section of the head tag is important because second declaration takes precedence over the earlier one and overrides its style. Class declaration overrides the body tag style declaration. Similarly the id declaration takes precedence over the class declaration. In this case it does not matter in which order the declarations appear in the head tag. The id declaration may appear early or late in the flow of the declaration It will always take precedence over the class declaration. Inline styling can take precedence over any other declaration in the style section of the document. In order to make sure that some style appear even in the case of accidental override of the style one should use a keyword called "!important" beside the style definition. e.g. color: red!important; </p>
+  <h3> Common features and values</h3>
+  <ul>
+    <li> Text color (color:blue) </li>
+    <li> text-decoration:underline, strikethrough</li>
+    <li> line-height:25px;</li>
+    <li> Background color (background-color:silver) use rgba(45, 45, 45, opacity 0 to 1) for creating background color on which the text will be easily visible</li>
+    <li> width (width:200px)</li>
+    <li> font size (font-size:16px)</li>
+    <li> font family (font-family:'Noto-Sans', sans-seriff, )</li>
+    <li> font-weight:bold, 900, 800, 600 etc;</li>
+    <li> font-style:italic;</li>
+    <li> border properties (border-color:red;
+      border-width:5px;
+      border-style:solid;
+      border-radius:10px;)</li>
+    <li> padding and margin (padding:10px, margin:5px, values can be negative)</li>
+    <li> padding-top, padding-right, padding-bottom, padding-left </li>
+    <li>margin-left, margin-right, margin-bottom, margin-top</li>
+    <li> padding:10px 20px 10px 20px;</li>
+    <li> Length units (pixels) - absolute (in, mm) and relative (em, rem : based on elements font size) </li>
+    <li>color:#RRGGBB, R, G, B are hex codes for colour. They can take 16*16 values for each of the R, G, and Bs.</li>
+    <li> Dodger Blue:#1E90FF, Orange:#FFA500 etc. Short codes are represented by RGB values (Only 16 values for each color). </li>
+    <li>Color can also be represented with rgb(val1,val2,val3). e.g. rgb(255, 255, 255), rgb(0,0,0) etc.</li>
+    <li> css variables: --variable-name:value; after the creation of the variable, in order to use it one needs to do: color:var(--variable-name, fallback-value)</li>
+    <li>css variables once defined can be used in any of its decendants. In order to make the variable available globally we can define the variable inside a root pseudocode (:root{}) selector. Re-define inside other elements and make it available for the decendants only while the global value being available for other elements.</li>
+    <li>Media query: create style based on the screen size. Set rules for different screen sizes. One can also set different values for css variables even using the root selector.</li>
+  </ul>
+
+  <h2 id='visual-design'> CSS visual design</h2>
+  <h3> Features and values</h3>
+  <ul>
+    <li> text-align:justify, center, right, left</li>
+    <li>height:20px;</li>
+    <li> <strong> This is a 'strong' which makes the text bold </strong></li>
+    <li> 'u' tag adds underline, 'em' tag creates underline, 's' tag creates strike-through, 'hr' tag creates horizontal line </li>
+    <li> box-shadow:offset-x offset-y blur-radius spread-radius color (blur-radius and spread-radius are optional entries). Multiple bos shadows can be created using commas. e.g. box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);</li>
+    <li> Opacity: 0 to 1; 1 is fully opaque and 0 value is fully transparent. it makes an element opaque or transppaprent.</li>
+    <li> To transform texts in order to make it uppercase or lowercase or capitalize, initialize etc we use text-transform. e.g. text-transform: lowercase, uppercase, capitalize;</li>
+    <li> Pseudo-class is a keyword which is added to the selector to create styles for a specific state. e.g. ":hover" pseudo-class. defn: h3:hover{color:green}</li>
+    <li> position property (position:relative;) allows us to specify how CSS should move the element relative to its current position in the normal box model. Combined with offset values given through left, right, top, bottom it sets the position. e.g. position:relative; left:10px; creates left offset.</li>
+    <li> position:absolute; This locks the element in place relative to its parent container and the element is removed from notmal flow. Surrounding elements ignore it. Other offset (left, right, top, bottom) properties can be used as usual. Parent element must have a position rule (typically position:relative).</li>
+    <li>position:fixed; kind of absolute positioning. Locks the element relative to browser window. Other offset properties are available for use. The element is removed from normal flow. It is different from absolute positioning in that the element does not move when the user scrolls.    </li>
+    <li>float:left or right usually pushes elements left or right. typically used with width property. width:50%. One can use comma to separate the element tags to asign same style to multiple elements. (h1, h2 {}) in css style. </li>
+    <li> z-index:higher makes the element move higher in the stack. Used when the elements overlap.</li>
+    <li> Center a block element horizontally. set margin:auto;  or one can also do it by setting display:block; This works even for images.</li>
+    <li> color wheel is a tool that helps in visualizing color. Similar colors (hue) are neighbour and different colors are further apart. When two colors are opposite to each other they are called complimentary colors. When these xolors are placed side by side they create strong visual contrast. e.g. red (#FF0000) and cyan (#00FFFF). There are many color picking tools available online which can be used to pick colors. </li>
+    <li> Tertiary colors: RGB colors are called primary colors. Mixing two primary colors create secondary colors. G+B is cyan, R+B is magenta and R+G is yellow. Cyan is complement to R and opposite to R on the color wheel. Mixing primary color with neighbouring secondary color creates tertiary color. Split-complimentary color scheme is used to create tertiary colors. orange, cyan, raspberry etc are example of tertiary color. One page usually has dominant color and complimentary color is used to bring attention to certain content on the page. Nice blue color - teal - #09A7A1.    </li>
+    <li> Hue, Saturation and lightness adjustment of color. Hue menas color
+. Saturation is the amount of gray in the color. Lightness means amount og black and white in the color. red - hsl(0,100%, 50%). Learn more about other colors. Mixing white creates tint and mixing black creates shade. </li>
+    <li> background:linear-gradient(gradient_direction, color1,  color2, color3,...) creates gradient color distribution for the element. gradient_direction is in degree. 90deg means horizontal gradient and 45deg menas diagonal gradient. We can use repeating-linear-gradient() in-place of linear-gradient() to repeat a specified gradient pattern. Backgroung property also supports url() function to link to an image of chosen texture or pattern which is used as the background of the element. </li>
+    <li> transform property lets you scale, move, rotate, skew etc the element. When used with pseudoclass :hover it adds interactivity to the element. p:hover{transform:scale(2.2);} scales the paragraph to 2.2 when mouse is hovered over the element. Applying it over any div elemetn will afferct all child element.</li>
+    <li> transform:skewX(45deg) or transform:skewY(-32deg) skews element along X or Y axis by specified degree. CSS can be used to create interesting gtaphics like heart shape, crescent moon etc. ::before and ::after pseudo elemets are used in such things. These adds something before or after the selected element using a CSS style. These must have a defined content property. These contents might be text or image, empty strings etc. </li>
+    <li> animation properties and @keyframes rule control how animation works for an element. animation-name sets the name of the animation which is later used by @keyframes to tell which rule to use with which animation. animation-duration sets the length of time for the animation. @keyframes sets the frames for the animation duration. 0% sets the opening scene and 100% sets the ending scene. animation name and duration are set into the CSS declaration based on id of the element. check detail format if needed to use from <a href='https://www.w3schools.com/' target='_blank'>www3school</a>. One can also apply animation in the hover pseudoclass to animate the hover state property of an element. animation-fill-mode property specifies which style to apply to an element when animaion is finished. Movement of an element can be simulated with animation by applying rules to the position offset property when the position is fixed or relative.</li>
+    <li> One can create a visual direction from left to right using the opacity rule on an elemnt. Just fade the element from left to right by applying an animation on the element and setting the opacity value at defined keyframe. </li>
+    <li>  Another animation property is animation-iteration-count which determines how many times one wants to loop through an animation. animation-iteration-count:infinite; sets the animation loop for infinte times. One can change the frame value (e.g. one may be set at 20% while other is at 50%) inside the @keyframes to change the rate of similar animation. Therefore multiple elements may be animated at variable rate. </li>
+    <li> animation-timing-function:ease (or ease-out, ease-in, linear) talks about the acceleration of the animation. One can also use cubic-bezier(0.25, 0.25, 0.75, 0.75) as a value. Learn more about it before use. </li>
+    
+      
+  </ul> 
+  <h3 id='flexbox'>CSS flexbox</h3>
+  <ul >
+    <li> display:flex; is used to position containers inside a parent container.</li>
+    <li> flex-direction:row;row-reverse;column;column-reverse; aligns the children element horizontally or vertically</li>
+    <li>justify-content:center; flex-end;flex-start;space-between;space-around;space-evenly; These are the options to place the flex items inside the flex container along the main axis of the of the arrangement. The main axis of the arrangement is the direction along which the items are arranged.</li>
+    <li> align-items: flex-start;flex-end;center;stretch;baseline; These are the options to set the items along cross axis. For row as the main axis, these options are used to push the items in the entire row up or down within the container and the reverse is true for columns.</li>
+    <li> flex-wrap:nowrap(default);wrap;wrap-reverse; These options helps to wrap a flex item. Generally all the flex items are fit into a single flex container. If the option is used, the items are wrapped into new column or new row depending on the size of the items and the container.</li>
+    <li> flex-shrink:any number(1,2 etc). These property is applied to the flex items and not on the container. The items are shrink by this much factor when flex container is too small. Items shrink when the width of the parent container is smaller than the combined widths of all the flex items.</li>
+    <li> flex-grow controls the size of the items when the parent container expands: just the opposite of the flex-shrink which controls the behaviour when the parent container shrinks. It takes numbers as value just like flex-shrink.</li>
+    <li> flex-basis sets the initial size of the items before shrink or grow takes control. One can give %, px or rem as the argument for the value.</li>
+    <li> Above flex shrink, grow or basis can be applied all at once to the flex like, flex: 1 0 10px; which means grow:1, shrink:0 and basis:10px; default value is 0 1 auto; </li>
+    <li> Use order property to arrange the items inside the container. By default the values appeart in the order they come in html. order:1, 2 etc. </li>
+    <li> align-self:center etc. It is used to align each item individually because other CSS align properties do not work on the flex items.</li>
+      
+  </ul>
+  <h3 id='CSS-grid'> CSS grid </h3>
+  <ul>
+    <li> display:grid; Using this any html element can be turned into a grid container. The parent element is referred to as container and its children are called items. </li>
+    <li> Create a container element. set its CSS display property to grid. Use grid-template-columns:50px 50px; to create two columns inside the container each 50px wide. Use grid-template-rows: 50px 50px ; to create two rows of 50px height.  </li>
+    <li> Grid units can be used to change the size of the rows and columns. fr: sets the rows or the columns to a fraction of available space. auto:sets width or height automatically; %: sets to percent width of the conatiner. Example: grid-template-columns: auto 50px 10% 2fr 1fr;
+    </li>
+    <li> Gap between columns: grid-column-gap: 10px; grid-row-gap:5px; grid-gap:10px 20px; sets 10px row gap and 20px column gap. Incase one value is given, it will create same gap between row and column.</li>
+    <li> To control the amount of columns an item will consume, one can use the grid-column:1/3; This will make the item to start at first vertical line of the grid on the left and span to the third line of the grid, which will consume two columns. similarly one can use grid-row.
+    </li>
+    <li> In CSS grid, the content of each item is located inside a box which is referred as cell. One can align the content's position within its cell horizontally using justify-self:start or center or end. To align items vertically one can use align-self:center etc. If you want to align all the items horizontally, you can use justify-items:center, etc. If you want to align all the items vertically, you can use align-items:center, etc. </li>
+    <li> One can group the cells  of a grid into an area and give the area a custom name. Use grid-template-ares: name of the columns; use '.' for an empty row. see more deatil. This is applied on the main container. In order to place an item in the custom area one can reference the name. .item1 {
+  grid-area: header;
+} lets the grid know that you wanto to place the item1 class in the are named "header". grid-area can also be used without dreating any template and using only the line numbers. grid-are:hori start/vert start/ hori end/ vert end; grid-area:1/2/3/3;
+ </li>
+    <li> Use repeat function to reduce repetition. grid-template-rows: repeat(100, 50px); creates 100 rows of 50px height each. one can also use multiple values inside repeat function. Similarly this can be used for rows.</li>
+    <li> use minmax(50px, 200px) to set max and minimum limit on the width.</li> 
+    <li> repeat function has an option auto-fill which allows to automatically insert as many rows or colmumns of the desired size possible depending on the size of the container. auto-fit works exactly like auto-fill. It stretches items to fit to the size of the container. If all the items can not fit in a single row a new row is created.</li>
+    <li> Use media queries to rearrange grid areas, change dimensions of a grid and rearange placement of items. </li>
+        
+  </ul>
+  <h3 id='applied-access'> Applied Accessibility</h3>
+  <ul>
+    <li> Use 'alt' attribute in images if necessary. If there are captions describing the images one can keep alt tag empty.</li>
+    <li> Use headings appropriately for different sections. Headigs should have semantic meaning. <u>each page should have only h1 element</u> which is the main subject of the page.</li>
+     <li> There are many tags to use to incorporate accessibility feature. e.g. main, header, footer, nav, article, and section. By default browsers views them similar as div element. Main element wraps the main content and there should be only one per page. This should not include content which are repeated in each page like navigation, banner etc. 'artcile' is a sectioning element and is used to wrap independent content. 'section' element groups related content. When there is no relation between groups of content use 'div'. 'header' wraps introductory information or navigation links for its parent tag  or works for elements that are repeated in multiple pages.</li>
+    <li> 'nav' is used to wrap around the main navigational llinks in the page. 'footer' contains copyright information to links to related docs. 'audio' element is used to wrap sound or audio content. It supports the 'controls' attribute which adds functionality to play, pause etc. It does not need any value.</li>
+    <li> 'figure' and 'figurecaption' are used together to wrap chart in the page. The 'label' tag wraps text for a specific form control item. The 'for' attribute on the 'label' tag associates the label with id of the corresponding item. SInce radio buttons come in group often we can semantically show that the choices are part of a group by using 'fieldset' tag surrounding the radio button group. Use 'legend' tag alog with the 'fieldset' tag.</li>
+    <li> Add date picker. use type='date' in the input field to get a date picker. Use 'time' tag as an inline element to standarize time. This value will be accessed by assistive devices 'sup' is an superscript tag. </li>
+    <li> 
+    
+    
+  </ul>
+
+</body> 
